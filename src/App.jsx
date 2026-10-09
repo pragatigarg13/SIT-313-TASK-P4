@@ -1,4 +1,6 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./Navbar";
 import About from "./About";
 import Projects from "./Projects";
@@ -9,10 +11,13 @@ import Subscribe from "./Subscribe";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
-function App() {
+import Login from "./Login";
+import SignUp from "./SignUp";
+
+// Existing DEV@Deakin homepage
+function Home() {
   return (
     <>
-      <Navbar />
       <About />
       <Projects />
       <Photos />
@@ -20,6 +25,21 @@ function App() {
       <FeaturedTutorials />
       <Subscribe />
       <Contact />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+
       <Footer />
     </>
   );

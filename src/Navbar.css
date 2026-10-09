@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 6px 12px;
+  background-color: #0891b2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-search {
+  flex: 1;
+  min-width: 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.navbar-post,
+.navbar-login {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .navbar-logo {
+    font-size: 13px;
+  }
+
+  .navbar-post,
+  .navbar-login {
+    font-size: 12px;
+  }
+}
